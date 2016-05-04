@@ -14,8 +14,8 @@ $j_results = json_decode($contents);
 //echo 'contents:';
 echo $_GET['callback']. "(" . $contents . ")";
 return $contents;
-else:
-echo "No symbol received.";
+//else:
+//echo "No symbol received.";
 endif;
 if ($_GET["input"]):
 $contentURL = 'http://dev.markitondemand.com/MODApis/Api/v2/Lookup/json?input=' .$_GET["input"];
@@ -30,8 +30,8 @@ $j_results = json_decode($contents);
 //echo 'contents:';
 echo $_GET['callback']. "(" . $contents . ")";
 return $contents;
-else:
-echo "No symbol received.";
+//else:
+//echo "No symbol received.";
 endif;
 ?>
 
