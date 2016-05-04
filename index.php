@@ -17,8 +17,8 @@ return $contents;
 else:
 echo "No symbol received.";
 endif;
-if ($_GET["lookup"]):
-$contentURL = 'http://dev.markitondemand.com/MODApis/Api/v2/Lookup/json?symbol=' .$_GET["lookup"];
+if ($_GET["input"]):
+$contentURL = 'http://dev.markitondemand.com/MODApis/Api/v2/Lookup/json?input=' .$_GET["input"];
 //echo $contentURL . "<br>111";
 $contents = file_get_contents($contentURL);
 //echo $contents . "<br>222";
