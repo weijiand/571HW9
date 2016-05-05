@@ -2,6 +2,15 @@
 header('Content-type: text/json');
 
 if ($_GET["bingsymbol"]):
+// Replace this value with your account key
+$accountKey = 'aiP8h8qDweqgEcAbzm+oyg0c263fTBQ/eKJw3VSPixo';
+$context = stream_context_create(array(
+    'http' => array(
+        'request_fulluri' => true,
+        'header'  => "Authorization: Basic " . base64_encode($accountKey . ":" . $accountKey)
+        )
+	)	
+)
 $contentURL = 'https://api.datamarket.azure.com/Bing/Search/v1/News?Query=%27' .$_GET["symbol"] .'%27&$format=json';
 //echo $contentURL . "<br>111";
 $contents = file_get_contents($contentURL);
