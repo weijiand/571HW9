@@ -12,7 +12,7 @@ $context = stream_context_create(array(
 	)	
 )
 $contentURL = 'https://api.datamarket.azure.com/Bing/Search/v1/News?Query=%27' .$_GET["bingsymbol"] .'%27&$format=json';
-//echo $contentURL . "<br>111";
+echo $contentURL . "<br>111";
 $contents = file_get_contents($contentURL, 0, $context);
 //echo $contents . "<br>222";
 $contents = utf8_encode($contents);
