@@ -14,7 +14,7 @@ $context = stream_context_create(array(
 );
 $frontURL = 'https://api.datamarket.azure.com/Bing/Search/v1/News?$format=json&Query=';
 $rearURL = urlencode( '\'' . $_POST["searchText"] . '\'');
-$contentURL = frontURL . rearURL;
+$contentURL = $frontURL . $rearURL;
 echo $contentURL . "<br>111";
 $contents = file_get_contents($contentURL, 0, $context);
 //echo $contents . "<br>222";
